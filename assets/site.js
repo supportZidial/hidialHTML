@@ -138,16 +138,4 @@
     }).catch(() => { /* The exported article selection remains available. */ });
   }
 
-  const contact = document.querySelector('[data-email-contact]');
-  if (contact) {
-    contact.addEventListener('submit', event => {
-      event.preventDefault();
-      if (!contact.reportValidity()) return;
-      const values = new FormData(contact);
-      const body = ['Name: ' + values.get('name'), 'Phone: ' + values.get('phone'), 'Email: ' + values.get('email'), '', values.get('comments')].join('\r\n');
-      const destination = `mailto:${contact.dataset.emailContact}?subject=${encodeURIComponent('HiDial website inquiry')}&body=${encodeURIComponent(body)}`;
-      location.href = destination;
-      contact.querySelector('[data-contact-status]').textContent = 'Your email app was requested. Review and send the prepared email there. You can also email us using the link below.';
-    });
-  }
 })();

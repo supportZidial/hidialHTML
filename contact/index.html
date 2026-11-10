@@ -14,7 +14,7 @@
   <meta property="og:url" content="https://hidial.com/contact">
   <meta property="og:image" content="https://hidial.com/image/blog/voice-network.svg">
   <meta name="twitter:card" content="summary">
-    <link rel="preload" as="style" href="/build/assets/app-DXuXnbMN.css"><link rel="stylesheet" href="/build/assets/app-DXuXnbMN.css"><link rel="stylesheet" href="/assets/static.css"><script defer src="/assets/site.js"></script></head>
+    <link rel="preload" as="style" href="/build/assets/app-DXuXnbMN.css"><link rel="stylesheet" href="/build/assets/app-DXuXnbMN.css"><link rel="stylesheet" href="/assets/static.css"><script defer src="/assets/site.js"></script><script defer src="/assets/contact.js"></script></head>
 <body class="min-h-screen bg-[var(--color-bg)] text-[var(--color-fg)] antialiased">
   <a href="#content" class="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-50 focus:rounded-lg focus:bg-[var(--color-surface)] focus:px-4 focus:py-2 focus:text-[var(--color-fg)]">
     Skip to content
@@ -96,35 +96,35 @@
     <section class="rounded-3xl border border-[var(--color-border)] bg-[var(--color-surface)] p-7">
       
       
-            <form method="get" action="mailto:info@zidial.com" class="space-y-4" data-email-contact="info@zidial.com">
-        <div>
+            <form method="post" action="https://api.hidial.com/contact" class="space-y-4" data-api-contact="https://api.hidial.com/contact">
+        <div class="static-contact-trap" aria-hidden="true"><label for="contact-website">Website</label><input id="contact-website" name="website" type="text" tabindex="-1" autocomplete="off"></div><div>
           <label class="text-sm font-medium text-[var(--color-fg)]" for="name">Name</label>
-          <input id="name" name="name" value="" required class="mt-2 w-full rounded-2xl border border-[var(--color-border)] bg-[var(--color-surface-2)] px-4 py-3 text-[var(--color-fg)] placeholder-slate-400 outline-none" placeholder="Your name">
+          <input id="name" name="name" value="" required class="mt-2 w-full rounded-2xl border border-[var(--color-border)] bg-[var(--color-surface-2)] px-4 py-3 text-[var(--color-fg)] placeholder-slate-400 outline-none" placeholder="Your name" maxlength="120">
         </div>
         <div>
           <label class="text-sm font-medium text-[var(--color-fg)]" for="phone">Phone</label>
-          <input id="phone" name="phone" value="" required class="mt-2 w-full rounded-2xl border border-[var(--color-border)] bg-[var(--color-surface-2)] px-4 py-3 text-[var(--color-fg)] placeholder-slate-400 outline-none" placeholder="Your Phone">
+          <input id="phone" name="phone" value="" required class="mt-2 w-full rounded-2xl border border-[var(--color-border)] bg-[var(--color-surface-2)] px-4 py-3 text-[var(--color-fg)] placeholder-slate-400 outline-none" placeholder="Your Phone" maxlength="40">
         </div>
 
         <div>
           <label class="text-sm font-medium text-[var(--color-fg)]" for="email">Email</label>
-          <input id="email" type="email" name="email" value="" required class="mt-2 w-full rounded-2xl border border-[var(--color-border)] bg-[var(--color-surface-2)] px-4 py-3 text-[var(--color-fg)] placeholder-slate-400 outline-none" placeholder="you@company.com">
+          <input id="email" type="email" name="email" value="" required class="mt-2 w-full rounded-2xl border border-[var(--color-border)] bg-[var(--color-surface-2)] px-4 py-3 text-[var(--color-fg)] placeholder-slate-400 outline-none" placeholder="you@company.com" maxlength="254">
         </div>
 
         <div>
           <label class="text-sm font-medium text-[var(--color-fg)]" for="comments">Message</label>
-          <textarea id="comments" name="comments" rows="6" required class="mt-2 w-full rounded-2xl border border-[var(--color-border)] bg-[var(--color-surface-2)] px-4 py-3 text-[var(--color-fg)] placeholder-slate-400 outline-none" placeholder="Tell us what you’re looking to do..."></textarea>
+          <textarea id="comments" name="comments" rows="6" required class="mt-2 w-full rounded-2xl border border-[var(--color-border)] bg-[var(--color-surface-2)] px-4 py-3 text-[var(--color-fg)] placeholder-slate-400 outline-none" placeholder="Tell us what you’re looking to do..." maxlength="5000"></textarea>
         </div>
 
-                              <button type="submit" class="inline-flex w-full items-center justify-center rounded-2xl
+                              <div data-turnstile-container=""></div><button type="submit" class="inline-flex w-full items-center justify-center rounded-2xl
            bg-[var(--color-brand)]
            px-5 py-3 text-sm font-semibold
-           text-[var(--color-fg)]    hover:opacity-95">Prepare email</button>
+           text-[var(--color-fg)]    hover:opacity-95" disabled>Send message</button>
 
         <p class="text-xs text-[var(--color-muted)]">
           By submitting, you agree that we may contact you about your request.
         </p>
-      <p class="journal-results" role="status" data-contact-status="">Opens your email app with your details. Send the email there to complete your request.</p><a href="mailto:info@zidial.com" class="journal-text-link">Email info@zidial.com</a></form>
+      <p class="journal-results" role="status" data-contact-status="" aria-live="polite">Loading secure contact form…</p><a href="mailto:info@zidial.com" class="journal-text-link">Email info@zidial.com</a><noscript>Enable JavaScript to send this form, or use the email link.</noscript></form>
     </section>
   </div>
   </main>

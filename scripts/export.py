@@ -108,20 +108,12 @@ for path, content in documents.items():
         note = etree.SubElement(listing.getparent(), 'noscript')
         note.text = 'All articles are shown. Enable JavaScript to search, filter topics, and paginate.'
     if path == '/contact':
-        form = doc.xpath('//form')[0]
-        for key in list(form.attrib):
-            if key.startswith('data-recaptcha'):
-                del form.attrib[key]
-        for element in form.xpath('.//input[@type="hidden"] | .//*[@data-recaptcha-error] | .//noscript'):
-            element.getparent().remove(element)
-        form.set('action', 'mailto:' + args.contact_email)
-        form.set('method', 'get')
-        form.set('data-email-contact', args.contact_email)
-        form.xpath('.//button')[0].text = 'Prepare email'
-        note = etree.SubElement(form, 'p', {'class': 'journal-results', 'role': 'status', 'data-contact-status': ''})
-        note.text = 'Opens your email app with your details. Send the email there to complete your request.'
-        direct = etree.SubElement(form, 'a', {'href': 'mailto:' + args.contact_email, 'class': 'journal-text-link'})
-        direct.text = 'Email ' + args.contact_email
+        # Preserve the configured API form and its client script during a content refresh.
+        existing = ROOT / 'contact/index.html'
+        if existing.exists():
+            doc = html.fromstring(existing.read_bytes())
+        else:
+            raise RuntimeError('Restore contact/index.html from Git before exporting')
     for element in doc.xpath('//*[@data-cfemail]'):
         encoded = bytes.fromhex(element.get('data-cfemail'))
         email = ''.join(chr(value ^ encoded[0]) for value in encoded[1:])
@@ -153,6 +145,8 @@ for path, content in documents.items():
     head = heads[0]
     css = etree.SubElement(head, 'link', {'rel': 'stylesheet', 'href': '/assets/static.css'})
     etree.SubElement(head, 'script', {'defer': 'defer', 'src': '/assets/site.js'})
+    if path == '/contact':
+        etree.SubElement(head, 'script', {'defer': 'defer', 'src': '/assets/contact.js'})
     destination = ROOT / path.strip('/') / 'index.html' if path != '/' else ROOT / 'index.html'
     destination.parent.mkdir(parents=True, exist_ok=True)
     destination.write_bytes(html.tostring(doc, encoding='utf-8', doctype='<!doctype html>', method='html'))

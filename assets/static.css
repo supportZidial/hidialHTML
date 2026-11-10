@@ -2,3 +2,6 @@
 .journal-pagination { display: flex; flex-wrap: wrap; gap: .5rem; }
 .journal-pagination a { padding: .65rem 1rem; border: 1px solid var(--color-border); border-radius: .4rem; }
 .journal-pagination a[aria-current="page"] { background: var(--color-fg); color: var(--color-bg); }
+
+.static-contact-trap { position: absolute; left: -10000px; width: 1px; height: 1px; overflow: hidden; }
+button:disabled { opacity: .6; cursor: wait; }
