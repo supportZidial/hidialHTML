@@ -1,0 +1,592 @@
+[
+  {
+    "slug": "how-to-build-an-ai-opener-workflow-inside-vicidial",
+    "title": "How to Build an AI Opener Workflow Inside ViciDial",
+    "excerpt": "Build an AI opener around a ViciDial campaign with explicit call states, dependable human handoffs, and a tested fallback.",
+    "category": "AI & Integrations",
+    "date": "2026-11-04",
+    "dateLabel": "Nov 4, 2026",
+    "reading": "3 min read",
+    "cover": "/image/blog/voice-network.svg"
+  },
+  {
+    "slug": "benefits-of-integrating-ai-voice-agents-directly-with-vicidial",
+    "title": "Benefits of Integrating AI Voice Agents Directly With ViciDial",
+    "excerpt": "Evaluate direct AI integration through reporting, suppression, troubleshooting, and the operational cost of keeping campaign records consistent.",
+    "category": "AI & Integrations",
+    "date": "2026-11-04",
+    "dateLabel": "Nov 4, 2026",
+    "reading": "3 min read",
+    "cover": "/image/blog/voice-network.svg"
+  },
+  {
+    "slug": "how-ai-agents-help-call-centers-increase-contact-rates-and-close-rates",
+    "title": "How AI Agents Help Call Centers Increase Contact Rates and Close Rates",
+    "excerpt": "Measure whether an AI-assisted workflow reaches more eligible people and creates more sales using stable denominators and a controlled pilot.",
+    "category": "AI & Integrations",
+    "date": "2026-11-04",
+    "dateLabel": "Nov 4, 2026",
+    "reading": "3 min read",
+    "cover": "/image/blog/voice-network.svg"
+  },
+  {
+    "slug": "ai-powered-lead-scoring-for-vicidial-campaigns",
+    "title": "AI-Powered Lead Scoring for ViciDial Campaigns",
+    "excerpt": "Turn evidence from conversations into explainable lead priorities, with clear handling for missing information and human overrides.",
+    "category": "AI & Integrations",
+    "date": "2026-11-04",
+    "dateLabel": "Nov 4, 2026",
+    "reading": "3 min read",
+    "cover": "/image/blog/voice-network.svg"
+  },
+  {
+    "slug": "how-to-automate-lead-qualification-without-replacing-your-sales-team",
+    "title": "How to Automate Lead Qualification Without Replacing Your Sales Team",
+    "excerpt": "Divide intake and sales responsibilities so AI can prepare opportunities while people retain ownership of decisions and customer commitments.",
+    "category": "AI & Integrations",
+    "date": "2026-11-04",
+    "dateLabel": "Nov 4, 2026",
+    "reading": "3 min read",
+    "cover": "/image/blog/voice-network.svg"
+  },
+  {
+    "slug": "real-time-agent-assist-for-vicidial-suggested-answers-knowledge-search-and-human-control",
+    "title": "Real-Time Agent Assist for ViciDial: Suggested Answers, Knowledge Search, and Human Control",
+    "excerpt": "Plan an agent-assist pilot with current knowledge sources, useful suggestions, clear permissions, and a manual path when assistance is unavailable.",
+    "category": "AI & Integrations",
+    "date": "2026-11-03",
+    "dateLabel": "Nov 3, 2026",
+    "reading": "3 min read",
+    "cover": "/image/blog/voice-network.svg"
+  },
+  {
+    "slug": "virtual-hold-and-queue-callbacks-let-customers-keep-their-place-without-staying-on-the-line",
+    "title": "Virtual Hold and Queue Callbacks: Let Customers Keep Their Place Without Staying on the Line",
+    "excerpt": "Design queue callbacks with explicit position rules, realistic expectations, controlled retries, and enough agent capacity to complete the promised contact.",
+    "category": "Operations",
+    "date": "2026-11-03",
+    "dateLabel": "Nov 3, 2026",
+    "reading": "4 min read",
+    "cover": "/image/blog/voice-network.svg"
+  },
+  {
+    "slug": "how-to-use-sms-appointment-confirmations-and-rescheduling-in-a-call-center",
+    "title": "How to Use SMS Appointment Confirmations and Rescheduling in a Call Center",
+    "excerpt": "Connect SMS reminders to the current appointment record, handle customer replies, and prevent outdated times or duplicate bookings.",
+    "category": "Business Messaging",
+    "date": "2026-11-03",
+    "dateLabel": "Nov 3, 2026",
+    "reading": "3 min read",
+    "cover": "/image/blog/business-numbers.svg"
+  },
+  {
+    "slug": "whatsapp-vs-sms-for-call-center-follow-ups-choosing-the-right-customer-channel",
+    "title": "WhatsApp vs SMS for Call Center Follow-Ups: Choosing the Right Customer Channel",
+    "excerpt": "Compare WhatsApp and SMS around customer preference, sender onboarding, business messaging rules, reply handling, and continuity across agents.",
+    "category": "Business Messaging",
+    "date": "2026-11-03",
+    "dateLabel": "Nov 3, 2026",
+    "reading": "4 min read",
+    "cover": "/image/blog/business-numbers.svg"
+  },
+  {
+    "slug": "branded-calling-on-iphone-and-android-business-names-logos-and-coverage-limits",
+    "title": "Branded Calling on iPhone and Android: Business Names, Logos, and Coverage Limits",
+    "excerpt": "Evaluate branded calling with verified business identity, device and carrier coverage checks, and realistic expectations for what customers will see.",
+    "category": "Caller ID & Reputation",
+    "date": "2026-11-03",
+    "dateLabel": "Nov 3, 2026",
+    "reading": "4 min read",
+    "cover": "/image/blog/voice-network.svg"
+  },
+  {
+    "slug": "rcs-business-messaging-for-call-centers-branded-messages-rich-content-and-sms-fallback",
+    "title": "RCS Business Messaging for Call Centers: Branded Messages, Rich Content, and SMS Fallback",
+    "excerpt": "Plan an RCS customer journey with verified identity, useful rich content, monitored replies, and a tested fallback when RCS is unavailable.",
+    "category": "Business Messaging",
+    "date": "2026-11-02",
+    "dateLabel": "Nov 2, 2026",
+    "reading": "3 min read",
+    "cover": "/image/blog/business-numbers.svg"
+  },
+  {
+    "slug": "a2p-10dlc-vs-toll-free-sms-vs-short-codes-choosing-a-business-messaging-sender",
+    "title": "A2P 10DLC vs Toll-Free SMS vs Short Codes: Choosing a Business Messaging Sender",
+    "excerpt": "Compare US business messaging sender options by onboarding, expected traffic, customer replies, ownership, and the total cost of operating the channel.",
+    "category": "Business Messaging",
+    "date": "2026-11-02",
+    "dateLabel": "Nov 2, 2026",
+    "reading": "4 min read",
+    "cover": "/image/blog/business-numbers.svg"
+  },
+  {
+    "slug": "missed-call-text-back-how-to-follow-up-without-creating-duplicate-messages",
+    "title": "Missed-Call Text Back: How to Follow Up Without Creating Duplicate Messages",
+    "excerpt": "Design a missed-call follow-up with clear eligibility, event deduplication, cancellation checks, and a monitored path for customer replies.",
+    "category": "Business Messaging",
+    "date": "2026-11-02",
+    "dateLabel": "Nov 2, 2026",
+    "reading": "4 min read",
+    "cover": "/image/blog/business-numbers.svg"
+  },
+  {
+    "slug": "apple-messages-for-business-for-contact-centers-entry-points-agent-handoffs-and-limitations",
+    "title": "Apple Messages for Business for Contact Centers: Entry Points, Agent Handoffs, and Limitations",
+    "excerpt": "Evaluate Apple Messages for Business as a customer-service channel with clear entry points, conversation ownership, and realistic implementation boundaries.",
+    "category": "Business Messaging",
+    "date": "2026-11-02",
+    "dateLabel": "Nov 2, 2026",
+    "reading": "4 min read",
+    "cover": "/image/blog/business-numbers.svg"
+  },
+  {
+    "slug": "ai-call-summaries-for-vicidial-reducing-after-call-work-without-losing-important-details",
+    "title": "AI Call Summaries for ViciDial: Reducing After-Call Work Without Losing Important Details",
+    "excerpt": "Design reviewable call summaries linked to the correct ViciDial record, with clear ownership, evidence checks, and safe handling of delayed results.",
+    "category": "AI & Integrations",
+    "date": "2026-11-02",
+    "dateLabel": "Nov 2, 2026",
+    "reading": "4 min read",
+    "cover": "/image/blog/voice-network.svg"
+  },
+  {
+    "slug": "automated-call-quality-assurance-what-ai-can-review-and-what-supervisors-should-verify",
+    "title": "Automated Call Quality Assurance: What AI Can Review and What Supervisors Should Verify",
+    "excerpt": "Use AI to assist call reviews with evidence-based criteria, supervisor calibration, correction paths, and separate handling of technical uncertainty.",
+    "category": "AI & Integrations",
+    "date": "2026-11-02",
+    "dateLabel": "Nov 2, 2026",
+    "reading": "4 min read",
+    "cover": "/image/blog/voice-network.svg"
+  },
+  {
+    "slug": "sms-vs-rcs-vs-apple-messages-for-business-what-call-centers-need-to-know",
+    "title": "SMS vs RCS vs Apple Messages for Business: What Call Centers Need to Know",
+    "excerpt": "Compare business messaging channels by reach, conversation entry points, reply handling, and the customer experience your team can support.",
+    "category": "Business Messaging",
+    "date": "2026-10-30",
+    "dateLabel": "Oct 30, 2026",
+    "reading": "4 min read",
+    "cover": "/image/blog/business-numbers.svg"
+  },
+  {
+    "slug": "how-call-centers-can-send-and-receive-text-messages-with-iphone-customers",
+    "title": "How Call Centers Can Send and Receive Text Messages With iPhone Customers",
+    "excerpt": "Build a business texting workflow for iPhone recipients with an approved sender, monitored replies, delivery tracking, and a clear handoff to agents.",
+    "category": "Business Messaging",
+    "date": "2026-10-30",
+    "dateLabel": "Oct 30, 2026",
+    "reading": "3 min read",
+    "cover": "/image/blog/business-numbers.svg"
+  },
+  {
+    "slug": "two-way-sms-for-call-centers-how-to-manage-customer-replies-across-agents",
+    "title": "Two-Way SMS for Call Centers: How to Manage Customer Replies Across Agents",
+    "excerpt": "Organize shared SMS conversations with explicit ownership, shift handoffs, duplicate-reply controls, and useful customer context.",
+    "category": "Business Messaging",
+    "date": "2026-10-30",
+    "dateLabel": "Oct 30, 2026",
+    "reading": "4 min read",
+    "cover": "/image/blog/business-numbers.svg"
+  },
+  {
+    "slug": "how-to-add-sms-follow-ups-to-vicidial-campaigns",
+    "title": "How to Add SMS Follow-Ups to ViciDial Campaigns",
+    "excerpt": "Plan a ViciDial-to-messaging integration with explicit triggers, eligibility checks, reply routing, and protection against duplicate sends.",
+    "category": "Business Messaging",
+    "date": "2026-10-30",
+    "dateLabel": "Oct 30, 2026",
+    "reading": "4 min read",
+    "cover": "/image/blog/business-numbers.svg"
+  },
+  {
+    "slug": "how-iphone-call-screening-changes-outbound-call-center-workflows",
+    "title": "How iPhone Call Screening Changes Outbound Call Center Workflows",
+    "excerpt": "Understand how device-side screening affects answered-call reporting, caller introductions, and dialer testing without trying to bypass customer controls.",
+    "category": "Operations",
+    "date": "2026-10-30",
+    "dateLabel": "Oct 30, 2026",
+    "reading": "4 min read",
+    "cover": "/image/blog/caller-reputation.svg"
+  },
+  {
+    "slug": "how-ai-can-screen-qualify-and-transfer-calls-to-closers-in-vicidial",
+    "title": "How AI Can Screen, Qualify, and Transfer Calls to Closers in ViciDial",
+    "excerpt": "Design a staged call workflow with separate screening, qualification, and transfer decisions, including clear failure and fallback paths.",
+    "category": "AI & Integrations",
+    "date": "2026-10-30",
+    "dateLabel": "Oct 30, 2026",
+    "reading": "3 min read",
+    "cover": "/image/blog/voice-network.svg"
+  },
+  {
+    "slug": "using-ai-agents-to-warm-up-leads-before-a-human-sales-rep-takes-over",
+    "title": "Using AI Agents to Warm Up Leads Before a Human Sales Rep Takes Over",
+    "excerpt": "Prepare a prospect for a useful human conversation through clear expectations, relevant questions, and an accurate sales handoff.",
+    "category": "AI & Integrations",
+    "date": "2026-10-30",
+    "dateLabel": "Oct 30, 2026",
+    "reading": "4 min read",
+    "cover": "/image/blog/voice-network.svg"
+  },
+  {
+    "slug": "how-ai-powered-prequalification-reduces-wasted-agent-time-in-vicidial-campaigns",
+    "title": "How AI-Powered Prequalification Reduces Wasted Agent Time in ViciDial Campaigns",
+    "excerpt": "Identify avoidable discovery and failed handoffs, then measure whether an AI pilot gives live agents more time for suitable conversations.",
+    "category": "AI & Integrations",
+    "date": "2026-10-30",
+    "dateLabel": "Oct 30, 2026",
+    "reading": "4 min read",
+    "cover": "/image/blog/voice-network.svg"
+  },
+  {
+    "slug": "ai-call-routing-in-vicidial-sending-the-right-leads-to-the-right-closers",
+    "title": "AI Call Routing in ViciDial: Sending the Right Leads to the Right Closers",
+    "excerpt": "Build routing rules around service fit, language, operating hours, and queue availability instead of an unrestricted AI destination choice.",
+    "category": "AI & Integrations",
+    "date": "2026-10-30",
+    "dateLabel": "Oct 30, 2026",
+    "reading": "4 min read",
+    "cover": "/image/blog/voice-network.svg"
+  },
+  {
+    "slug": "how-ai-agents-can-pre-qualify-leads-in-vicidial-before-sending-them-to-a-closer",
+    "title": "How AI Agents Can Pre-Qualify Leads in ViciDial Before Sending Them to a Closer",
+    "excerpt": "Define qualification rules, collect useful answers, and prepare a clear handoff before a prospect reaches your closing team.",
+    "category": "AI & Integrations",
+    "date": "2026-10-29",
+    "dateLabel": "Oct 29, 2026",
+    "reading": "4 min read",
+    "cover": "/image/blog/voice-network.svg"
+  },
+  {
+    "slug": "how-to-use-ai-voice-agents-with-vicidial-for-first-touch-sales-calls",
+    "title": "How to Use AI Voice Agents With ViciDial for First-Touch Sales Calls",
+    "excerpt": "Plan an initial AI conversation with clear ownership of dialing, lead updates, callbacks, and escalation to a human.",
+    "category": "AI & Integrations",
+    "date": "2026-10-29",
+    "dateLabel": "Oct 29, 2026",
+    "reading": "4 min read",
+    "cover": "/image/blog/voice-network.svg"
+  },
+  {
+    "slug": "why-connecting-ai-directly-to-vicidial-is-better-than-using-a-separate-calling-platform",
+    "title": "Why Connecting AI Directly to ViciDial Is Better Than Using a Separate Calling Platform",
+    "excerpt": "Compare an integrated ViciDial workflow with a separate AI dialer, including record ownership, reporting, transfers, and operational tradeoffs.",
+    "category": "AI & Integrations",
+    "date": "2026-10-29",
+    "dateLabel": "Oct 29, 2026",
+    "reading": "4 min read",
+    "cover": "/image/blog/voice-network.svg"
+  },
+  {
+    "slug": "ai-agents-vs-human-openers-how-call-centers-can-improve-efficiency-with-vicidial",
+    "title": "AI Agents vs Human Openers: How Call Centers Can Improve Efficiency With ViciDial",
+    "excerpt": "Compare AI and human opening workflows using accepted transfers, qualification accuracy, customer experience, and total operating cost.",
+    "category": "AI & Integrations",
+    "date": "2026-10-29",
+    "dateLabel": "Oct 29, 2026",
+    "reading": "4 min read",
+    "cover": "/image/blog/voice-network.svg"
+  },
+  {
+    "slug": "sip-trunking-for-medicare-campaigns-what-you-need-to-know",
+    "title": "SIP Trunking for Medicare Campaigns: What You Need to Know",
+    "excerpt": "Plan capacity, callbacks, recording workflows, and agent routing for Medicare campaigns using current CMS marketing guidance.",
+    "category": "SIP & Dialers",
+    "date": "2026-10-27",
+    "dateLabel": "Oct 27, 2026",
+    "reading": "4 min read",
+    "cover": "/image/blog/voice-network.svg"
+  },
+  {
+    "slug": "voip-for-real-estate-teams-how-to-manage-inbound-and-outbound-calls",
+    "title": "VoIP for Real Estate Teams: How to Manage Inbound and Outbound Calls",
+    "excerpt": "Organize property inquiries, agent callbacks, showing follow-ups, and shared numbers without losing the customer context.",
+    "category": "Operations",
+    "date": "2026-10-27",
+    "dateLabel": "Oct 27, 2026",
+    "reading": "4 min read",
+    "cover": "/image/blog/business-numbers.svg"
+  },
+  {
+    "slug": "voip-for-phone-verification-and-transactional-calls",
+    "title": "VoIP for Phone Verification and Transactional Calls",
+    "excerpt": "Design voice-code delivery and service notifications with clear triggers, retry limits, privacy controls, and application-level verification.",
+    "category": "AI & Integrations",
+    "date": "2026-10-27",
+    "dateLabel": "Oct 27, 2026",
+    "reading": "4 min read",
+    "cover": "/image/blog/voice-network.svg"
+  },
+  {
+    "slug": "essential-voip-integrations-for-crm-based-sales-teams",
+    "title": "Essential VoIP Integrations for CRM-Based Sales Teams",
+    "excerpt": "Connect calling, customer records, outcomes, callbacks, and suppression data through a workflow your sales team can actually operate.",
+    "category": "AI & Integrations",
+    "date": "2026-10-27",
+    "dateLabel": "Oct 27, 2026",
+    "reading": "4 min read",
+    "cover": "/image/blog/voice-network.svg"
+  },
+  {
+    "slug": "business-telecom-for-startups-numbers-voice-and-compliance-from-day-one",
+    "title": "Business Telecom for Startups: Numbers, Voice, and Compliance From Day One",
+    "excerpt": "Set up business-owned numbers, practical call routing, clear account ownership, and basic operating controls before your team grows.",
+    "category": "Operations",
+    "date": "2026-10-27",
+    "dateLabel": "Oct 27, 2026",
+    "reading": "4 min read",
+    "cover": "/image/blog/business-numbers.svg"
+  },
+  {
+    "slug": "connecting-vicidial-with-retell-ai-for-smarter-voice-automation",
+    "title": "Connecting VICIdial with Retell AI for Smarter Voice Automation",
+    "excerpt": "Modern contact centers are under pressure to answer faster, qualify better, and reduce repetitive agent workload.",
+    "category": "AI & Integrations",
+    "date": "2026-10-14",
+    "dateLabel": "Oct 14, 2026",
+    "reading": "3 min read",
+    "cover": "/image/blog/voice-network.svg"
+  },
+  {
+    "slug": "interconnecting-vicidial-with-jambonz-for-flexible-voice-infrastructure",
+    "title": "Interconnecting VICIdial with Jambonz for Flexible Voice Infrastructure",
+    "excerpt": "VICIdial is a platform for managing call center campaigns, agents, and dialing operations.",
+    "category": "AI & Integrations",
+    "date": "2026-10-14",
+    "dateLabel": "Oct 14, 2026",
+    "reading": "2 min read",
+    "cover": "/image/blog/voice-network.svg"
+  },
+  {
+    "slug": "stir-shaken-explained-for-businesses-making-outbound-calls",
+    "title": "STIR/SHAKEN Explained for Businesses Making Outbound Calls",
+    "excerpt": "STIR/SHAKEN is a caller ID authentication framework used in United States voice networks.",
+    "category": "Caller ID & Reputation",
+    "date": "2026-10-14",
+    "dateLabel": "Oct 14, 2026",
+    "reading": "3 min read",
+    "cover": "/image/blog/caller-reputation.svg"
+  },
+  {
+    "slug": "ai-lead-qualification-in-vicidial-how-to-route-only-qualified-prospects-to-live-agents",
+    "title": "AI Lead Qualification in ViciDial: How to Route Only Qualified Prospects to Live Agents",
+    "excerpt": "Live agents are expensive.",
+    "category": "AI & Integrations",
+    "date": "2026-10-14",
+    "dateLabel": "Oct 14, 2026",
+    "reading": "4 min read",
+    "cover": "/image/blog/voice-network.svg"
+  },
+  {
+    "slug": "the-future-of-vicidial-ai-agents-smart-transfers-and-automated-qualification",
+    "title": "The Future of ViciDial: AI Agents, Smart Transfers, and Automated Qualification",
+    "excerpt": "ViciDial has powered call centers for years because it is flexible, proven, and highly customizable.",
+    "category": "AI & Integrations",
+    "date": "2026-10-14",
+    "dateLabel": "Oct 14, 2026",
+    "reading": "3 min read",
+    "cover": "/image/blog/voice-network.svg"
+  },
+  {
+    "slug": "how-to-improve-answer-rates-in-outbound-calling-campaigns",
+    "title": "How to Improve Answer Rates in Outbound Calling Campaigns",
+    "excerpt": "In outbound sales, a useful conversation starts with someone answering the phone.",
+    "category": "Caller ID & Reputation",
+    "date": "2026-10-14",
+    "dateLabel": "Oct 14, 2026",
+    "reading": "3 min read",
+    "cover": "/image/blog/caller-reputation.svg"
+  },
+  {
+    "slug": "how-much-does-a-sip-trunk-cost-for-businesses",
+    "title": "How Much Does a SIP Trunk Cost for Businesses?",
+    "excerpt": "SIP trunk pricing depends on your calling workload and the provider's billing model.",
+    "category": "SIP & Dialers",
+    "date": "2026-10-14",
+    "dateLabel": "Oct 14, 2026",
+    "reading": "2 min read",
+    "cover": "/image/blog/voice-network.svg"
+  },
+  {
+    "slug": "did-numbers-what-they-are-and-how-to-use-them-for-sales-support-and-verification",
+    "title": "DID Numbers: What They Are and How to Use Them for Sales, Support, and Verification",
+    "excerpt": "A DID, or Direct Inward Dialing number, gives customers a telephone number that routes to a specific destination in your business system.",
+    "category": "Business Numbers",
+    "date": "2026-10-14",
+    "dateLabel": "Oct 14, 2026",
+    "reading": "3 min read",
+    "cover": "/image/blog/business-numbers.svg"
+  },
+  {
+    "slug": "how-to-reduce-failed-calls-and-improve-answer-rates",
+    "title": "How to Reduce Failed Calls and Improve Answer Rates",
+    "excerpt": "A failed call and an unanswered call are different outcomes.",
+    "category": "Caller ID & Reputation",
+    "date": "2026-10-14",
+    "dateLabel": "Oct 14, 2026",
+    "reading": "3 min read",
+    "cover": "/image/blog/caller-reputation.svg"
+  },
+  {
+    "slug": "how-to-scale-outbound-calling-without-damaging-number-reputation",
+    "title": "How to Scale Outbound Calling Without Damaging Number Reputation",
+    "excerpt": "Scaling an outbound operation means increasing capacity while keeping the customer experience manageable.",
+    "category": "Caller ID & Reputation",
+    "date": "2026-10-14",
+    "dateLabel": "Oct 14, 2026",
+    "reading": "3 min read",
+    "cover": "/image/blog/caller-reputation.svg"
+  },
+  {
+    "slug": "why-not-all-voip-routes-have-the-same-call-quality",
+    "title": "Why Not All VoIP Routes Have the Same Call Quality",
+    "excerpt": "Two VoIP providers can send a call to the same phone number and produce very different results.",
+    "category": "SIP & Dialers",
+    "date": "2026-10-14",
+    "dateLabel": "Oct 14, 2026",
+    "reading": "5 min read",
+    "cover": "/image/blog/voice-network.svg"
+  },
+  {
+    "slug": "local-numbers-for-sales-teams-when-to-use-them-and-when-not-to",
+    "title": "Local Numbers for Sales Teams: When to Use Them and When Not To",
+    "excerpt": "Local numbers can help sales teams connect with prospects in specific markets.",
+    "category": "Business Numbers",
+    "date": "2026-10-14",
+    "dateLabel": "Oct 14, 2026",
+    "reading": "4 min read",
+    "cover": "/image/blog/business-numbers.svg"
+  },
+  {
+    "slug": "business-phone-systems-for-remote-sales-and-support-teams",
+    "title": "Business Phone Systems for Remote Sales and Support Teams",
+    "excerpt": "Remote teams need phone systems that work outside the office without making calls harder to manage.",
+    "category": "Operations",
+    "date": "2026-10-14",
+    "dateLabel": "Oct 14, 2026",
+    "reading": "4 min read",
+    "cover": "/image/blog/migration.svg"
+  },
+  {
+    "slug": "what-to-do-if-your-voip-carrier-blocks-or-limits-your-calls",
+    "title": "What to Do if Your VoIP Carrier Blocks or Limits Your Calls",
+    "excerpt": "When calls are blocked or limited, first identify where the failure happens.",
+    "category": "Operations",
+    "date": "2026-10-14",
+    "dateLabel": "Oct 14, 2026",
+    "reading": "2 min read",
+    "cover": "/image/blog/migration.svg"
+  },
+  {
+    "slug": "checklist-for-launching-outbound-calls-with-compliance-and-strong-deliverability",
+    "title": "Checklist for Launching Outbound Calls With Compliance and Strong Deliverability",
+    "excerpt": "Before launching an outbound campaign, review the connection, caller identity, contact practices, and agent workflow.",
+    "category": "Caller ID & Reputation",
+    "date": "2026-10-14",
+    "dateLabel": "Oct 14, 2026",
+    "reading": "3 min read",
+    "cover": "/image/blog/caller-reputation.svg"
+  },
+  {
+    "slug": "what-is-sip-trunking-and-how-does-it-reduce-business-calling-costs",
+    "title": "What Is SIP Trunking and How Does It Reduce Business Calling Costs?",
+    "excerpt": "SIP trunking connects a business phone system or dialer to a voice provider over an IP network.",
+    "category": "SIP & Dialers",
+    "date": "2026-10-14",
+    "dateLabel": "Oct 14, 2026",
+    "reading": "3 min read",
+    "cover": "/image/blog/voice-network.svg"
+  },
+  {
+    "slug": "how-much-do-did-numbers-cost-for-business-calling",
+    "title": "How Much Do DID Numbers Cost for Business Calling?",
+    "excerpt": "The cost of a DID number includes more than its monthly rental.",
+    "category": "Business Numbers",
+    "date": "2026-10-14",
+    "dateLabel": "Oct 14, 2026",
+    "reading": "2 min read",
+    "cover": "/image/blog/business-numbers.svg"
+  },
+  {
+    "slug": "voip-for-insurance-agencies-numbers-routing-and-compliance",
+    "title": "VoIP for Insurance Agencies: Numbers, Routing, and Compliance",
+    "excerpt": "Insurance agencies handle quote requests, policy servicing, billing questions, and claims-related calls.",
+    "category": "Operations",
+    "date": "2026-10-14",
+    "dateLabel": "Oct 14, 2026",
+    "reading": "3 min read",
+    "cover": "/image/blog/migration.svg"
+  },
+  {
+    "slug": "what-is-call-deliverability-and-why-it-matters-more-than-price-per-minute",
+    "title": "What Is Call Deliverability and Why It Matters More Than Price Per Minute",
+    "excerpt": "Many businesses compare VoIP providers by looking at one number first: the price per minute.",
+    "category": "Caller ID & Reputation",
+    "date": "2026-10-14",
+    "dateLabel": "Oct 14, 2026",
+    "reading": "5 min read",
+    "cover": "/image/blog/caller-reputation.svg"
+  },
+  {
+    "slug": "sip-trunking-for-vicidial",
+    "title": "SIP Trunking for VICIdial: A Call Center Guide",
+    "excerpt": "What to confirm with your carrier, how to plan capacity, and what to test before connecting a VICIdial campaign.",
+    "category": "SIP & Dialers",
+    "date": "2026-10-13",
+    "dateLabel": "Oct 13, 2026",
+    "reading": "3 min read",
+    "cover": "/image/blog/voice-network.svg"
+  },
+  {
+    "slug": "why-your-calls-show-as-spam-likely",
+    "title": "Why Your Calls Show as Spam Likely",
+    "excerpt": "Separate caller ID authentication from reputation, investigate the affected calls, and improve the way your team follows up.",
+    "category": "Caller ID & Reputation",
+    "date": "2026-10-13",
+    "dateLabel": "Oct 13, 2026",
+    "reading": "3 min read",
+    "cover": "/image/blog/caller-reputation.svg"
+  },
+  {
+    "slug": "what-to-check-before-buying-did-numbers",
+    "title": "What to Check Before Buying DID Numbers",
+    "excerpt": "Check routing, capability, ownership requirements, recurring costs, and porting options before ordering numbers for your team.",
+    "category": "Business Numbers",
+    "date": "2026-10-13",
+    "dateLabel": "Oct 13, 2026",
+    "reading": "3 min read",
+    "cover": "/image/blog/business-numbers.svg"
+  },
+  {
+    "slug": "how-to-choose-a-voip-provider-for-outbound-campaigns",
+    "title": "How to Choose a VoIP Provider for Outbound Campaigns",
+    "excerpt": "Compare traffic acceptance, capacity, billing, troubleshooting, and support using a controlled pilot rather than price alone.",
+    "category": "SIP & Dialers",
+    "date": "2026-10-13",
+    "dateLabel": "Oct 13, 2026",
+    "reading": "3 min read",
+    "cover": "/image/blog/voice-network.svg"
+  },
+  {
+    "slug": "local-numbers-vs-toll-free-numbers",
+    "title": "Local Numbers vs Toll-Free Numbers",
+    "excerpt": "Choose numbers around how customers reach your business, the coverage you need, and the cost of returning their calls.",
+    "category": "Business Numbers",
+    "date": "2026-10-13",
+    "dateLabel": "Oct 13, 2026",
+    "reading": "3 min read",
+    "cover": "/image/blog/business-numbers.svg"
+  },
+  {
+    "slug": "how-to-migrate-sip-providers-without-downtime",
+    "title": "How to Migrate SIP Providers Without Downtime",
+    "excerpt": "Plan a staged SIP migration with test numbers, a small traffic pilot, clear rollback conditions, and a separate number-porting checklist.",
+    "category": "Operations",
+    "date": "2026-10-13",
+    "dateLabel": "Oct 13, 2026",
+    "reading": "3 min read",
+    "cover": "/image/blog/migration.svg"
+  }
+]

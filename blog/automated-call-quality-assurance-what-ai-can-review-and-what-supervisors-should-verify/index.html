@@ -1,0 +1,188 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Automated Call Quality Assurance: What AI Can Review and What Supervisors Should Verify — HiDial Blog</title>
+  <meta name="description" content="Use AI to assist call reviews with evidence-based criteria, supervisor calibration, correction paths, and separate handling of technical uncertainty.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://hidial.com/blog/automated-call-quality-assurance-what-ai-can-review-and-what-supervisors-should-verify">
+  <meta property="og:site_name" content="HiDial">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Automated Call Quality Assurance: What AI Can Review and What Supervisors Should Verify — HiDial Blog">
+  <meta property="og:description" content="Use AI to assist call reviews with evidence-based criteria, supervisor calibration, correction paths, and separate handling of technical uncertainty.">
+  <meta property="og:url" content="https://hidial.com/blog/automated-call-quality-assurance-what-ai-can-review-and-what-supervisors-should-verify">
+  <meta property="og:image" content="https://hidial.com/image/blog/voice-network.svg">
+  <meta name="twitter:card" content="summary">
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","headline":"Automated Call Quality Assurance: What AI Can Review and What Supervisors Should Verify","description":"Use AI to assist call reviews with evidence-based criteria, supervisor calibration, correction paths, and separate handling of technical uncertainty.","datePublished":"2026-11-02T14:23:14+00:00","dateModified":"2026-11-02T15:11:14+00:00","author":{"@type":"Organization","name":"HiDial","url":"https://hidial.com"},"publisher":{"@type":"Organization","name":"HiDial","url":"https://hidial.com"},"mainEntityOfPage":"https://hidial.com/blog/automated-call-quality-assurance-what-ai-can-review-and-what-supervisors-should-verify"}</script>
+  <link rel="preload" as="style" href="/build/assets/app-DXuXnbMN.css"><link rel="stylesheet" href="/build/assets/app-DXuXnbMN.css"><link rel="stylesheet" href="/assets/static.css"><script defer src="/assets/site.js"></script></head>
+<body class="min-h-screen bg-[var(--color-bg)] text-[var(--color-fg)] antialiased">
+  <a href="#content" class="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-50 focus:rounded-lg focus:bg-[var(--color-surface)] focus:px-4 focus:py-2 focus:text-[var(--color-fg)]">
+    Skip to content
+  </a>
+
+  <header class="sticky top-0 z-40 border-b border-[var(--color-border)] bg-[var(--color-surface)]/80 backdrop-blur">
+    <div class="mx-auto flex max-w-6xl items-center justify-between px-4 py-4">
+      <a href="/" class="flex items-center gap-3 font-semibold tracking-tight text-[var(--color-fg)]">
+        <span class="logo-wrap inline-flex items-center justify-center rounded-xl bg-transparent p-0">
+          <img src="/image/logo-light.png" alt="HiDial" class="hidial-logo hidial-logo--light h-9 w-auto">
+          <img src="/image/logo-dark.png" alt="HiDial" class="hidial-logo hidial-logo--dark h-9 w-auto">
+        </span>
+        <span>HiDial</span>
+      </a>
+
+      <!-- Desktop nav -->
+      <nav class="hidden items-center gap-6 text-sm text-[var(--color-muted)] md:flex">
+        <a class="hover:text-[var(--color-fg)]" href="/telecom-plans/">Plans</a>
+        <a class="hover:text-[var(--color-fg)]" href="/about-us/">About</a>
+        <a class="hover:opacity-80" href="/blog/">Blog</a>
+        <a class="hover:text-[var(--color-fg)]" href="/contact/">Contact</a>
+        <a class="hover:text-[var(--color-fg)]" href="tel:+14154187578">(415) 418-7578</a>
+
+        <button type="button" onclick="window.__hidialToggleTheme &amp;&amp; window.__hidialToggleTheme()" class="inline-flex items-center justify-center rounded-xl border border-[var(--color-border)] bg-[var(--color-surface-2)] px-3 py-2 text-[var(--color-fg)] hover:opacity-90" title="Toggle theme" aria-label="Toggle theme" data-theme-toggle>
+          <span aria-hidden="true" class="text-base leading-none" data-theme-icon>☀️</span>
+        </button>
+      </nav>
+
+      <!-- Mobile nav -->
+      <div class="md:hidden">
+        <details class="group relative">
+          <summary class="list-none cursor-pointer rounded-xl border border-[var(--color-border)] bg-[var(--color-surface-2)] px-3 py-2 text-sm font-medium text-[var(--color-fg)] hover:opacity-90">
+            Menu
+          </summary>
+          <div class="absolute right-0 mt-2 w-64 rounded-2xl border border-[var(--color-border)] bg-[var(--color-surface)] p-2 shadow-lg">
+            <a class="block rounded-xl px-3 py-2 text-sm text-[var(--color-fg)] hover:bg-[var(--color-surface-2)]" href="/telecom-plans/">Plans</a>
+            <a class="block rounded-xl px-3 py-2 text-sm text-[var(--color-fg)] hover:bg-[var(--color-surface-2)]" href="/about-us/">About</a>
+            <a class="block rounded-xl px-3 py-2 text-sm hover:opacity-80" href="/blog/">Blog</a>
+            <a class="block rounded-xl px-3 py-2 text-sm text-[var(--color-fg)] hover:bg-[var(--color-surface-2)]" href="/contact/">Contact</a>
+            <a class="block rounded-xl px-3 py-2 text-sm text-[var(--color-fg)] hover:bg-[var(--color-surface-2)]" href="tel:+14154187578">Call (415) 418-7578</a>
+
+            <button type="button" onclick="window.__hidialToggleTheme &amp;&amp; window.__hidialToggleTheme()" class="mt-2 inline-flex w-full items-center justify-center gap-2 rounded-xl border border-[var(--color-border)] bg-[var(--color-surface-2)] px-3 py-2 text-sm font-semibold text-[var(--color-fg)] hover:opacity-90" title="Toggle theme" aria-label="Toggle theme" data-theme-toggle>
+              <span aria-hidden="true" class="text-base leading-none" data-theme-icon>☀️</span>
+              <span class="text-sm">Theme</span>
+            </button>
+          </div>
+        </details>
+      </div>
+    </div>
+  </header>
+
+  <main id="content" class="mx-auto w-full max-w-6xl px-4 py-10">
+    <nav class="journal-breadcrumb" aria-label="Breadcrumb"><a href="/">Home</a><span>/</span><a href="/blog/">Blog</a><span>/</span><span>AI &amp; Integrations</span></nav>
+<article>
+  <header class="journal-article-header">
+    <a class="journal-topic" href="/blog/?category=AI%20%26%20Integrations">AI &amp; Integrations</a>
+    <h1>Automated Call Quality Assurance: What AI Can Review and What Supervisors Should Verify</h1><p class="journal-deck">Use AI to assist call reviews with evidence-based criteria, supervisor calibration, correction paths, and separate handling of technical uncertainty.</p>
+    <div class="journal-byline"><span class="journal-avatar" aria-hidden="true">H</span><span>HiDial</span><span>·</span><time datetime="2026-11-02">November 2, 2026</time><span>·</span><span>4 min read</span></div>
+  </header>
+  <figure class="journal-article-cover"><img src="/image/blog/voice-network.svg" alt="" width="1200" height="520" fetchpriority="high"></figure>
+  <div class="journal-reading-layout">
+    <aside class="journal-toc"><div><p class="journal-eyebrow">IN THIS GUIDE</p><nav aria-label="Table of contents"><a href="#section-0">Define criteria that reviewers can apply</a><a href="#section-1">Use AI for draft answers and review queues</a><a href="#section-2">Separate technical problems from agent behavior</a><a href="#section-3">Calibrate with human reviewers</a><a href="#section-4">Give agents a correction path</a><a href="#section-5">Evaluate coverage and usefulness honestly</a></nav><a class="journal-text-link" href="/telecom-plans/">Explore HiDial services ↗</a></div></aside>
+    <div class="journal-prose"><p>Automated quality assurance can help supervisors locate conversations that need attention and prepare draft evaluations. It should not turn every uncertain transcription or model judgment into a confirmed agent-performance issue.</p>
+<p>A useful QA workflow separates observable evidence, interpretation, and the final decision. The technology can assist the review, while supervisors remain responsible for the standards and how results affect people and customer operations.</p>
+<h2 id="section-0">Define criteria that reviewers can apply</h2>
+<p>Begin with the existing quality form. Rewrite vague questions such as “Was the agent professional?” into clearer criteria that explain which behavior is being evaluated and what evidence is required.</p>
+<p>For example, check whether the business was identified, whether the customer's request was acknowledged, or whether a stated next step matched the action documented in the system. Some questions need the recording, others need case data, and others cannot be answered from the transcript alone.</p>
+<p>Include an insufficient-evidence outcome. A missing sentence in a transcript should not automatically count as proof that the agent failed to say it.</p>
+<h2 id="section-1">Use AI for draft answers and review queues</h2>
+<p>A model may propose answers to a defined evaluation form or flag a conversation for inspection. Require the result to point to the relevant conversation evidence rather than provide only a score.</p>
+<p>Amazon Connect documents <a href="https://docs.aws.amazon.com/connect/latest/adminguide/generative-ai-performance-evaluations.html">generative AI performance evaluations</a>, including review before submission and limitations linked to transcript quality. Treat it as an example of an available platform capability, not evidence that every call-center system offers equivalent accuracy or coverage.</p>
+<p>For ViciDial, verify how recordings, call identifiers, lead records, and review results would move between the dialer and any external QA service.</p>
+<h2 id="section-2">Separate technical problems from agent behavior</h2>
+<p>Poor audio, overlapping speakers, an unsupported language, or an incomplete recording can distort the evaluation. Route those cases for technical or manual review instead of presenting a numerical result as dependable.</p>
+<p>Do not infer intent or dishonesty from a sentiment label. A frustrated customer, a difficult connection, and an agent's actual conduct require different kinds of evidence.</p>
+<p>Similarly, a keyword match may help find a call but does not necessarily explain the surrounding context. Supervisors should listen to the relevant passage before confirming a serious finding.</p>
+<h2 id="section-3">Calibrate with human reviewers</h2>
+<p>Choose a representative sample and have trained reviewers evaluate it using the same definitions. Compare disagreements at the question level rather than only comparing total scores.</p>
+<p>Identify whether the difference came from unclear criteria, missing context, transcript errors, or the AI's interpretation. Update the form or workflow accordingly and keep the version used for each evaluation.</p>
+<p>Recheck the process after a model, template, or campaign change. A configuration that worked for one call type may not apply to another.</p>
+<h2 id="section-4">Give agents a correction path</h2>
+<p>Explain which evidence supports a finding and allow the agent to raise a concern through an established review process. Keep the original automated suggestion distinguishable from the final approved evaluation.</p>
+<p>Prioritize review before using uncertain outputs for consequential decisions. Automated summaries and scores should help supervisors investigate, not obscure responsibility for the final judgment.</p>
+<p>Track overturned findings and the reasons for correction. They can reveal systematic problems that a dashboard average would hide.</p>
+<h2 id="section-5">Evaluate coverage and usefulness honestly</h2>
+<p>Report how many calls were eligible for automated review, how many produced usable results, and how many required manual attention. A large recording inventory does not mean the entire inventory was evaluated successfully.</p>
+<p>Measure time spent verifying results, consistency between reviewers, and whether coaching addresses observable behavior. Continue sampling unflagged calls so the team can detect issues the automated process missed.</p>
+<p>Start with limited call types and maintain manual evaluation while the pilot is assessed. Read about <a href="/blog/ai-call-summaries-for-vicidial-reducing-after-call-work-without-losing-important-details/">AI call summaries for ViciDial</a>, or <a href="/contact/">contact HiDial</a> to discuss the recording and integration requirements for your environment.</p>
+</div>
+  </div>
+</article>
+<section class="journal-cta">
+  <div><p class="journal-eyebrow">PUT IT INTO PRACTICE</p><h2>Tell us about your calling setup.</h2><p>Share your dialer, destinations, and expected volume. We’ll discuss numbers, routing, and the next steps.</p></div>
+  <a class="journal-button" href="/contact/">Talk to HiDial <span aria-hidden="true">↗</span></a>
+</section>
+<section class="journal-related"><div class="journal-section-heading"><div><p class="journal-eyebrow">KEEP READING</p><h2>More practical guides.</h2></div><a class="journal-text-link" href="/blog/">All articles ↗</a></div><div class="journal-grid"><article class="journal-card">
+  <a class="journal-cover" href="/blog/how-to-build-an-ai-opener-workflow-inside-vicidial/" tabindex="-1" aria-hidden="true">
+    <img src="/image/blog/voice-network.svg" alt="" loading="lazy" width="720" height="440">
+    <span>AI &amp; Integrations</span>
+  </a>
+  <div class="journal-card-body">
+    <p class="journal-meta"><time datetime="2026-11-04">Nov 4, 2026</time><span>3 min read</span></p>
+    <h3><a href="/blog/how-to-build-an-ai-opener-workflow-inside-vicidial/">How to Build an AI Opener Workflow Inside ViciDial</a></h3>
+    <p>Build an AI opener around a ViciDial campaign with explicit call states, dependable human handoffs, and a tested fallback.</p>
+    <a class="journal-text-link" href="/blog/how-to-build-an-ai-opener-workflow-inside-vicidial/">Read article <span aria-hidden="true">↗</span><span class="sr-only">: How to Build an AI Opener Workflow Inside ViciDial</span></a>
+  </div>
+</article>
+<article class="journal-card">
+  <a class="journal-cover" href="/blog/benefits-of-integrating-ai-voice-agents-directly-with-vicidial/" tabindex="-1" aria-hidden="true">
+    <img src="/image/blog/voice-network.svg" alt="" loading="lazy" width="720" height="440">
+    <span>AI &amp; Integrations</span>
+  </a>
+  <div class="journal-card-body">
+    <p class="journal-meta"><time datetime="2026-11-04">Nov 4, 2026</time><span>3 min read</span></p>
+    <h3><a href="/blog/benefits-of-integrating-ai-voice-agents-directly-with-vicidial/">Benefits of Integrating AI Voice Agents Directly With ViciDial</a></h3>
+    <p>Evaluate direct AI integration through reporting, suppression, troubleshooting, and the operational cost of keeping campaign records consistent.</p>
+    <a class="journal-text-link" href="/blog/benefits-of-integrating-ai-voice-agents-directly-with-vicidial/">Read article <span aria-hidden="true">↗</span><span class="sr-only">: Benefits of Integrating AI Voice Agents Directly With ViciDial</span></a>
+  </div>
+</article>
+<article class="journal-card">
+  <a class="journal-cover" href="/blog/how-ai-agents-help-call-centers-increase-contact-rates-and-close-rates/" tabindex="-1" aria-hidden="true">
+    <img src="/image/blog/voice-network.svg" alt="" loading="lazy" width="720" height="440">
+    <span>AI &amp; Integrations</span>
+  </a>
+  <div class="journal-card-body">
+    <p class="journal-meta"><time datetime="2026-11-04">Nov 4, 2026</time><span>3 min read</span></p>
+    <h3><a href="/blog/how-ai-agents-help-call-centers-increase-contact-rates-and-close-rates/">How AI Agents Help Call Centers Increase Contact Rates and Close Rates</a></h3>
+    <p>Measure whether an AI-assisted workflow reaches more eligible people and creates more sales using stable denominators and a controlled pilot.</p>
+    <a class="journal-text-link" href="/blog/how-ai-agents-help-call-centers-increase-contact-rates-and-close-rates/">Read article <span aria-hidden="true">↗</span><span class="sr-only">: How AI Agents Help Call Centers Increase Contact Rates and Close Rates</span></a>
+  </div>
+</article>
+</div></section>
+  </main>
+
+  <footer class="border-t border-[var(--color-border)] bg-[var(--color-surface)]">
+    <div class="mx-auto max-w-6xl px-4 py-10">
+      <div class="flex flex-col gap-6 md:flex-row md:items-center md:justify-between">
+        <div>
+          <div class="flex items-center gap-3 font-semibold text-[var(--color-fg)]">
+            <span class="logo-wrap inline-flex items-center justify-center rounded-xl bg-transparent p-0">
+              <img src="/image/logo-light.png" alt="HiDial" class="hidial-logo hidial-logo--light h-8 w-auto">
+              <img src="/image/logo-dark.png" alt="HiDial" class="hidial-logo hidial-logo--dark h-8 w-auto">
+            </span>
+            <span>HiDial</span>
+          </div>
+          <p class="mt-2 max-w-md text-sm text-[var(--color-muted)]">
+            Business-ready voice, numbers, and compliance tools—built for performance, reliability, and scale.
+          </p>
+          <p class="mt-3 text-sm">
+            <a class="text-[var(--color-muted)] hover:text-[var(--color-fg)]" href="tel:+14154187578">(415) 418-7578</a>
+          </p>
+        </div>
+
+        <div class="flex flex-wrap gap-x-6 gap-y-2 text-sm text-[var(--color-muted)]">
+          <a class="hover:text-[var(--color-fg)]" href="/telecom-plans/">Plans</a>
+          <a class="hover:text-[var(--color-fg)]" href="/about-us/">About</a>
+          <a class="hover:text-[var(--color-fg)]" href="/blog/">Blog</a>
+          <a class="hover:text-[var(--color-fg)]" href="/contact/">Contact</a>
+          <a class="hover:text-[var(--color-fg)]" href="/acceptable-use-policy/">AUP</a>
+          <a class="hover:text-[var(--color-fg)]" href="/terms-of-service/">Terms</a>
+        </div>
+      </div>
+
+      <div class="mt-8 flex flex-col gap-2 border-t border-[var(--color-border)] pt-6 text-xs text-[var(--color-muted)] md:flex-row md:items-center md:justify-between">
+        <p>© 2026 HiDial. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

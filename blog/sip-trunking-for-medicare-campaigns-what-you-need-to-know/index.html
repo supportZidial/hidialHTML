@@ -1,0 +1,185 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>SIP Trunking for Medicare Campaigns: What You Need to Know — HiDial Blog</title>
+  <meta name="description" content="Plan capacity, callbacks, recording workflows, and agent routing for Medicare campaigns using current CMS marketing guidance.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://hidial.com/blog/sip-trunking-for-medicare-campaigns-what-you-need-to-know">
+  <meta property="og:site_name" content="HiDial">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="SIP Trunking for Medicare Campaigns: What You Need to Know — HiDial Blog">
+  <meta property="og:description" content="Plan capacity, callbacks, recording workflows, and agent routing for Medicare campaigns using current CMS marketing guidance.">
+  <meta property="og:url" content="https://hidial.com/blog/sip-trunking-for-medicare-campaigns-what-you-need-to-know">
+  <meta property="og:image" content="https://hidial.com/image/blog/voice-network.svg">
+  <meta name="twitter:card" content="summary">
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","headline":"SIP Trunking for Medicare Campaigns: What You Need to Know","description":"Plan capacity, callbacks, recording workflows, and agent routing for Medicare campaigns using current CMS marketing guidance.","datePublished":"2026-10-27T13:38:06+00:00","dateModified":"2026-10-27T14:03:06+00:00","author":{"@type":"Organization","name":"HiDial","url":"https://hidial.com"},"publisher":{"@type":"Organization","name":"HiDial","url":"https://hidial.com"},"mainEntityOfPage":"https://hidial.com/blog/sip-trunking-for-medicare-campaigns-what-you-need-to-know"}</script>
+  <link rel="preload" as="style" href="/build/assets/app-DXuXnbMN.css"><link rel="stylesheet" href="/build/assets/app-DXuXnbMN.css"><link rel="stylesheet" href="/assets/static.css"><script defer src="/assets/site.js"></script></head>
+<body class="min-h-screen bg-[var(--color-bg)] text-[var(--color-fg)] antialiased">
+  <a href="#content" class="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-50 focus:rounded-lg focus:bg-[var(--color-surface)] focus:px-4 focus:py-2 focus:text-[var(--color-fg)]">
+    Skip to content
+  </a>
+
+  <header class="sticky top-0 z-40 border-b border-[var(--color-border)] bg-[var(--color-surface)]/80 backdrop-blur">
+    <div class="mx-auto flex max-w-6xl items-center justify-between px-4 py-4">
+      <a href="/" class="flex items-center gap-3 font-semibold tracking-tight text-[var(--color-fg)]">
+        <span class="logo-wrap inline-flex items-center justify-center rounded-xl bg-transparent p-0">
+          <img src="/image/logo-light.png" alt="HiDial" class="hidial-logo hidial-logo--light h-9 w-auto">
+          <img src="/image/logo-dark.png" alt="HiDial" class="hidial-logo hidial-logo--dark h-9 w-auto">
+        </span>
+        <span>HiDial</span>
+      </a>
+
+      <!-- Desktop nav -->
+      <nav class="hidden items-center gap-6 text-sm text-[var(--color-muted)] md:flex">
+        <a class="hover:text-[var(--color-fg)]" href="/telecom-plans/">Plans</a>
+        <a class="hover:text-[var(--color-fg)]" href="/about-us/">About</a>
+        <a class="hover:opacity-80" href="/blog/">Blog</a>
+        <a class="hover:text-[var(--color-fg)]" href="/contact/">Contact</a>
+        <a class="hover:text-[var(--color-fg)]" href="tel:+14154187578">(415) 418-7578</a>
+
+        <button type="button" onclick="window.__hidialToggleTheme &amp;&amp; window.__hidialToggleTheme()" class="inline-flex items-center justify-center rounded-xl border border-[var(--color-border)] bg-[var(--color-surface-2)] px-3 py-2 text-[var(--color-fg)] hover:opacity-90" title="Toggle theme" aria-label="Toggle theme" data-theme-toggle>
+          <span aria-hidden="true" class="text-base leading-none" data-theme-icon>☀️</span>
+        </button>
+      </nav>
+
+      <!-- Mobile nav -->
+      <div class="md:hidden">
+        <details class="group relative">
+          <summary class="list-none cursor-pointer rounded-xl border border-[var(--color-border)] bg-[var(--color-surface-2)] px-3 py-2 text-sm font-medium text-[var(--color-fg)] hover:opacity-90">
+            Menu
+          </summary>
+          <div class="absolute right-0 mt-2 w-64 rounded-2xl border border-[var(--color-border)] bg-[var(--color-surface)] p-2 shadow-lg">
+            <a class="block rounded-xl px-3 py-2 text-sm text-[var(--color-fg)] hover:bg-[var(--color-surface-2)]" href="/telecom-plans/">Plans</a>
+            <a class="block rounded-xl px-3 py-2 text-sm text-[var(--color-fg)] hover:bg-[var(--color-surface-2)]" href="/about-us/">About</a>
+            <a class="block rounded-xl px-3 py-2 text-sm hover:opacity-80" href="/blog/">Blog</a>
+            <a class="block rounded-xl px-3 py-2 text-sm text-[var(--color-fg)] hover:bg-[var(--color-surface-2)]" href="/contact/">Contact</a>
+            <a class="block rounded-xl px-3 py-2 text-sm text-[var(--color-fg)] hover:bg-[var(--color-surface-2)]" href="tel:+14154187578">Call (415) 418-7578</a>
+
+            <button type="button" onclick="window.__hidialToggleTheme &amp;&amp; window.__hidialToggleTheme()" class="mt-2 inline-flex w-full items-center justify-center gap-2 rounded-xl border border-[var(--color-border)] bg-[var(--color-surface-2)] px-3 py-2 text-sm font-semibold text-[var(--color-fg)] hover:opacity-90" title="Toggle theme" aria-label="Toggle theme" data-theme-toggle>
+              <span aria-hidden="true" class="text-base leading-none" data-theme-icon>☀️</span>
+              <span class="text-sm">Theme</span>
+            </button>
+          </div>
+        </details>
+      </div>
+    </div>
+  </header>
+
+  <main id="content" class="mx-auto w-full max-w-6xl px-4 py-10">
+    <nav class="journal-breadcrumb" aria-label="Breadcrumb"><a href="/">Home</a><span>/</span><a href="/blog/">Blog</a><span>/</span><span>SIP &amp; Dialers</span></nav>
+<article>
+  <header class="journal-article-header">
+    <a class="journal-topic" href="/blog/?category=SIP%20%26%20Dialers">SIP &amp; Dialers</a>
+    <h1>SIP Trunking for Medicare Campaigns: What You Need to Know</h1><p class="journal-deck">Plan capacity, callbacks, recording workflows, and agent routing for Medicare campaigns using current CMS marketing guidance.</p>
+    <div class="journal-byline"><span class="journal-avatar" aria-hidden="true">H</span><span>HiDial</span><span>·</span><time datetime="2026-10-27">October 27, 2026</time><span>·</span><span>4 min read</span></div>
+  </header>
+  <figure class="journal-article-cover"><img src="/image/blog/voice-network.svg" alt="" width="1200" height="520" fetchpriority="high"></figure>
+  <div class="journal-reading-layout">
+    <aside class="journal-toc"><div><p class="journal-eyebrow">IN THIS GUIDE</p><nav aria-label="Table of contents"><a href="#section-0">Establish the permitted contact workflow first</a><a href="#section-1">Use guidance for the correct contract year</a><a href="#section-2">Plan channels and calls per second separately</a><a href="#section-3">Make every displayed number a working callback route</a><a href="#section-4">Route to an eligible and available agent</a><a href="#section-5">Treat recording as a complete workflow</a><a href="#section-6">Validate before expanding the campaign</a></nav><a class="journal-text-link" href="/telecom-plans/">Explore HiDial services ↗</a></div></aside>
+    <div class="journal-prose"><p>A Medicare campaign needs a working voice connection, a documented reason for each contact, and a reliable path to the appropriate agent. SIP trunking provides the connection between your dialer or phone system and the voice network. Campaign rules, agent eligibility, disclosures, and customer records need their own operational controls.</p>
+<p>Before choosing a trunk, describe how calls will be placed and received. An inbound inquiry line, an appointment reminder, and an outbound plan discussion can have different requirements. Treat them as separate workflows when planning the system.</p>
+<h2 id="section-0">Establish the permitted contact workflow first</h2>
+<p>Medicare.gov explains that plans and their representatives generally cannot call or text prospective beneficiaries without permission, with circumstances such as existing plan membership treated differently. A purchased lead file does not, by itself, document the basis for each contact. <a href="https://www.medicare.gov/sign-up-change-plans/different-types-of-medicare-health-plans/rules-medicare-plans">Review Medicare's marketing rules</a>.</p>
+<p>Record the contact source, the permission or relationship your compliance process relies on, and any restriction on the follow-up. Make suppression information available to the systems placing calls. Keep the business identity accurate when presenting caller ID or introducing an agent.</p>
+<h2 id="section-1">Use guidance for the correct contract year</h2>
+<p>CMS says its updated CY 2027 marketing and communications policies apply beginning October 1, 2026. Its summary includes changes to Scope of Appointment scheduling, TPMO disclosures, and recording retention. For example, the updated TPMO disclosure timing is before benefits are discussed, rather than within the first minute. <a href="https://www.cms.gov/files/document/medicare-oep-marketing-guidelines-2026.pdf">CMS's CY 2027 changes</a>.</p>
+<p>Use the applicable CMS and plan guidance when approving scripts, appointment processes, and retention settings. Give someone responsibility for updating those workflows when requirements change. A saved dialer template can outlast the rule it was originally designed to support.</p>
+<h2 id="section-2">Plan channels and calls per second separately</h2>
+<p>Tell the SIP provider your destination countries, campaign type, expected peak concurrent calls, and rate of new call attempts. A dialer can generate many attempts while comparatively few calls are connected to agents.</p>
+<p>Confirm the provider accepts the traffic type. Ask what happens when capacity, destination, or account limits are reached. Use those documented limits to configure pacing, then test with a small group before increasing volume. More trunk capacity does not create more available agents.</p>
+<h2 id="section-3">Make every displayed number a working callback route</h2>
+<p>A beneficiary returning a call should reach the right business and team. Map each displayed number to a known inbound destination, including overflow and after-hours handling. Keep the relationship between campaign, number, queue, and business owner documented.</p>
+<p>Test caller ID presentation and two-way audio across representative destination networks. Caller ID authentication is separate from a recipient's interest in the call and does not guarantee that a receiving network will remove a warning label.</p>
+<h2 id="section-4">Route to an eligible and available agent</h2>
+<p>Configure the connected platform to consider the agent's role, licensing, plan-related authorization, and current availability as appropriate to the operation. Those decisions belong in the routing and campaign applications; a SIP trunk does not determine them automatically.</p>
+<p>Test transfers with the same path the campaign will use. Confirm that a representative receives the necessary contact context and that the call is handled correctly when a destination is busy, unavailable, or closed. Avoid putting sensitive beneficiary information into routine SIP troubleshooting tickets.</p>
+<h2 id="section-5">Treat recording as a complete workflow</h2>
+<p>Check where recording starts, what happens during transfers, and how records can be retrieved by an authorized reviewer. Where the updated CMS requirements apply, its summary describes six years of retention and permits transcripts in place of recordings for years four through six. <a href="https://www.cms.gov/files/document/medicare-oep-marketing-guidelines-2026.pdf">CMS retention summary</a>.</p>
+<p>Define access controls, retention, retrieval, and deletion responsibilities across the dialer, recording storage, and any downstream platform. Do not assume the voice provider stores the recordings or that turning recording on is sufficient for compliance.</p>
+<h2 id="section-6">Validate before expanding the campaign</h2>
+<p>Document test calls for audio, DTMF, transfers, recording continuity, callbacks, opt-out handling, and after-hours routing. Keep timestamps, timezones, and call identifiers for failures. Agree on escalation contacts and conditions for pausing a campaign.</p>
+<p><a href="/contact/">Contact HiDial</a> with your dialer, number inventory, destinations, and peak capacity requirements to discuss SIP connectivity. Have the people responsible for Medicare marketing approve the contact and agent workflows separately.</p>
+</div>
+  </div>
+</article>
+<section class="journal-cta">
+  <div><p class="journal-eyebrow">PUT IT INTO PRACTICE</p><h2>Tell us about your calling setup.</h2><p>Share your dialer, destinations, and expected volume. We’ll discuss numbers, routing, and the next steps.</p></div>
+  <a class="journal-button" href="/contact/">Talk to HiDial <span aria-hidden="true">↗</span></a>
+</section>
+<section class="journal-related"><div class="journal-section-heading"><div><p class="journal-eyebrow">KEEP READING</p><h2>More practical guides.</h2></div><a class="journal-text-link" href="/blog/">All articles ↗</a></div><div class="journal-grid"><article class="journal-card">
+  <a class="journal-cover" href="/blog/how-much-does-a-sip-trunk-cost-for-businesses/" tabindex="-1" aria-hidden="true">
+    <img src="/image/blog/voice-network.svg" alt="" loading="lazy" width="720" height="440">
+    <span>SIP &amp; Dialers</span>
+  </a>
+  <div class="journal-card-body">
+    <p class="journal-meta"><time datetime="2026-10-14">Oct 14, 2026</time><span>2 min read</span></p>
+    <h3><a href="/blog/how-much-does-a-sip-trunk-cost-for-businesses/">How Much Does a SIP Trunk Cost for Businesses?</a></h3>
+    <p>SIP trunk pricing depends on your calling workload and the provider's billing model.</p>
+    <a class="journal-text-link" href="/blog/how-much-does-a-sip-trunk-cost-for-businesses/">Read article <span aria-hidden="true">↗</span><span class="sr-only">: How Much Does a SIP Trunk Cost for Businesses?</span></a>
+  </div>
+</article>
+<article class="journal-card">
+  <a class="journal-cover" href="/blog/why-not-all-voip-routes-have-the-same-call-quality/" tabindex="-1" aria-hidden="true">
+    <img src="/image/blog/voice-network.svg" alt="" loading="lazy" width="720" height="440">
+    <span>SIP &amp; Dialers</span>
+  </a>
+  <div class="journal-card-body">
+    <p class="journal-meta"><time datetime="2026-10-14">Oct 14, 2026</time><span>5 min read</span></p>
+    <h3><a href="/blog/why-not-all-voip-routes-have-the-same-call-quality/">Why Not All VoIP Routes Have the Same Call Quality</a></h3>
+    <p>Two VoIP providers can send a call to the same phone number and produce very different results.</p>
+    <a class="journal-text-link" href="/blog/why-not-all-voip-routes-have-the-same-call-quality/">Read article <span aria-hidden="true">↗</span><span class="sr-only">: Why Not All VoIP Routes Have the Same Call Quality</span></a>
+  </div>
+</article>
+<article class="journal-card">
+  <a class="journal-cover" href="/blog/what-is-sip-trunking-and-how-does-it-reduce-business-calling-costs/" tabindex="-1" aria-hidden="true">
+    <img src="/image/blog/voice-network.svg" alt="" loading="lazy" width="720" height="440">
+    <span>SIP &amp; Dialers</span>
+  </a>
+  <div class="journal-card-body">
+    <p class="journal-meta"><time datetime="2026-10-14">Oct 14, 2026</time><span>3 min read</span></p>
+    <h3><a href="/blog/what-is-sip-trunking-and-how-does-it-reduce-business-calling-costs/">What Is SIP Trunking and How Does It Reduce Business Calling Costs?</a></h3>
+    <p>SIP trunking connects a business phone system or dialer to a voice provider over an IP network.</p>
+    <a class="journal-text-link" href="/blog/what-is-sip-trunking-and-how-does-it-reduce-business-calling-costs/">Read article <span aria-hidden="true">↗</span><span class="sr-only">: What Is SIP Trunking and How Does It Reduce Business Calling Costs?</span></a>
+  </div>
+</article>
+</div></section>
+  </main>
+
+  <footer class="border-t border-[var(--color-border)] bg-[var(--color-surface)]">
+    <div class="mx-auto max-w-6xl px-4 py-10">
+      <div class="flex flex-col gap-6 md:flex-row md:items-center md:justify-between">
+        <div>
+          <div class="flex items-center gap-3 font-semibold text-[var(--color-fg)]">
+            <span class="logo-wrap inline-flex items-center justify-center rounded-xl bg-transparent p-0">
+              <img src="/image/logo-light.png" alt="HiDial" class="hidial-logo hidial-logo--light h-8 w-auto">
+              <img src="/image/logo-dark.png" alt="HiDial" class="hidial-logo hidial-logo--dark h-8 w-auto">
+            </span>
+            <span>HiDial</span>
+          </div>
+          <p class="mt-2 max-w-md text-sm text-[var(--color-muted)]">
+            Business-ready voice, numbers, and compliance tools—built for performance, reliability, and scale.
+          </p>
+          <p class="mt-3 text-sm">
+            <a class="text-[var(--color-muted)] hover:text-[var(--color-fg)]" href="tel:+14154187578">(415) 418-7578</a>
+          </p>
+        </div>
+
+        <div class="flex flex-wrap gap-x-6 gap-y-2 text-sm text-[var(--color-muted)]">
+          <a class="hover:text-[var(--color-fg)]" href="/telecom-plans/">Plans</a>
+          <a class="hover:text-[var(--color-fg)]" href="/about-us/">About</a>
+          <a class="hover:text-[var(--color-fg)]" href="/blog/">Blog</a>
+          <a class="hover:text-[var(--color-fg)]" href="/contact/">Contact</a>
+          <a class="hover:text-[var(--color-fg)]" href="/acceptable-use-policy/">AUP</a>
+          <a class="hover:text-[var(--color-fg)]" href="/terms-of-service/">Terms</a>
+        </div>
+      </div>
+
+      <div class="mt-8 flex flex-col gap-2 border-t border-[var(--color-border)] pt-6 text-xs text-[var(--color-muted)] md:flex-row md:items-center md:justify-between">
+        <p>© 2026 HiDial. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

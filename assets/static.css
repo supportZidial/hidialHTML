@@ -1,0 +1,4 @@
+[hidden] { display: none !important; }
+.journal-pagination { display: flex; flex-wrap: wrap; gap: .5rem; }
+.journal-pagination a { padding: .65rem 1rem; border: 1px solid var(--color-border); border-radius: .4rem; }
+.journal-pagination a[aria-current="page"] { background: var(--color-fg); color: var(--color-bg); }
