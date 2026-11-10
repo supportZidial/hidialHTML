@@ -78,7 +78,7 @@ export async function handleRequest(request, env, send = fetch) {
   if (values.name.length > 120 || values.email.length > 254 || values.phone.length > 40 || values.message.length > 5000 || !REQUEST_ID_PATTERN.test(values.requestId)) {
     return respond({ message: 'Please check the length and format of your information.' }, 422, origin);
   }
-  if (!config.ready) return respond({ message: 'Online messaging is temporarily unavailable. Please email us directly.' }, 503, origin);
+  if (!config.ready) return respond({ message: 'Online messaging is temporarily unavailable. Please try again later.' }, 503, origin);
   if (!values.turnstileToken || values.turnstileToken.length > 2048) return respond({ message: 'Please complete the security check and try again.' }, 422, origin);
   let verification;
   try {
@@ -108,11 +108,22 @@ export async function handleRequest(request, env, send = fetch) {
       body: JSON.stringify({ from: env.CONTACT_FROM_EMAIL, to: [env.CONTACT_TO_EMAIL], reply_to: values.email, subject: `HiDial website contact from ${values.name}`, text }),
       signal: AbortSignal.timeout(15000),
     });
-    if (!response.ok) throw new Error('delivery-failed');
+    if (!response.ok) {
+      let failure = {};
+      try { failure = await response.json(); } catch {}
+      // Log only provider status and a known category, never contact data or credentials.
+      const reason = response.status === 401 ? 'authentication' :
+        /domain.*verif|verif.*domain/i.test(String(failure.message || '')) ? 'sender-domain' :
+        /testing|own email/i.test(String(failure.message || '')) ? 'sandbox' :
+        response.status === 403 ? 'permissions' :
+        response.status === 429 ? 'rate-limit' : 'provider-rejection';
+      console.error(JSON.stringify({ event: 'contact_delivery_failed', status: response.status, reason }));
+      return respond({ message: 'Unable to send your message right now. Please try again later.', code: 'email_delivery_failed' }, 502, origin);
+    }
     const result = await response.json();
     if (!result.id) throw new Error('delivery-unconfirmed');
   } catch {
-    return respond({ message: 'Unable to send your message right now. Please try again or email us directly.' }, 502, origin);
+    return respond({ message: 'Unable to send your message right now. Please try again later.' }, 502, origin);
   }
   return respond({ message: 'Thanks. Your message has been sent to HiDial.' }, 200, origin);
 }

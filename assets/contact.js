@@ -17,12 +17,12 @@
 
   function loadTurnstile() {
     return new Promise((resolve, reject) => {
-      const timeout = setTimeout(() => reject(new Error('The security check could not load. Please reload or email us directly.')), 20000);
+      const timeout = setTimeout(() => reject(new Error('The security check could not load. Please reload the page and try again.')), 20000);
       window.hidialTurnstileReady = () => { clearTimeout(timeout); resolve(); };
       const script = document.createElement('script');
       script.src = 'https://challenges.cloudflare.com/turnstile/v0/api.js?onload=hidialTurnstileReady&render=explicit';
       script.async = true;
-      script.onerror = () => { clearTimeout(timeout); reject(new Error('The security check could not load. Please reload or email us directly.')); };
+      script.onerror = () => { clearTimeout(timeout); reject(new Error('The security check could not load. Please reload the page and try again.')); };
       document.head.append(script);
     });
   }
@@ -67,12 +67,12 @@
         signal: AbortSignal.timeout(30000),
       });
       const result = await response.json();
-      if (!response.ok) throw new Error(result.message || 'Unable to send. Please try again or email us directly.');
+      if (!response.ok) throw new Error(result.message || 'Unable to send. Please try again later.');
       notify(result.message);
       form.reset();
       requestId = crypto.randomUUID();
     } catch (error) {
-      notify(error.name === 'TimeoutError' || error instanceof TypeError ? 'The connection was interrupted. Please try again or email us directly.' : error.message, true);
+      notify(error.name === 'TimeoutError' || error instanceof TypeError ? 'The connection was interrupted. Please try again later.' : error.message, true);
     } finally {
       window.turnstile.reset(widget);
       busy = false;
@@ -84,15 +84,15 @@
   async function initialize() {
     try {
       const response = await fetch(endpoint + '/config', { signal: AbortSignal.timeout(10000), cache: 'no-store' });
-      if (!response.ok) throw new Error('Online messaging is temporarily unavailable. Please email us directly.');
+      if (!response.ok) throw new Error('Online messaging is temporarily unavailable. Please try again later.');
       const config = await response.json();
-      if (!config.ready || !config.siteKey) throw new Error('Online messaging is temporarily unavailable. Please email us directly.');
+      if (!config.ready || !config.siteKey) throw new Error('Online messaging is temporarily unavailable. Please try again later.');
       await loadTurnstile();
       widget = window.turnstile.render(form.querySelector('[data-turnstile-container]'), {
         sitekey: config.siteKey,
         action: 'contact',
         execution: 'execute',
-        appearance: 'interaction-only',
+        appearance: 'always',
         theme: 'auto',
         callback: token => { if (tokenCallback) tokenCallback.resolve(token); },
         'error-callback': () => { rejectToken('The security check failed. Please try again.'); },
@@ -102,7 +102,7 @@
       button.disabled = false;
       notify('');
     } catch (error) {
-      notify(error.message || 'Online messaging is temporarily unavailable. Please email us directly.', true);
+      notify(error.message || 'Online messaging is temporarily unavailable. Please try again later.', true);
     }
   }
   initialize();
