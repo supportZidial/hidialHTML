@@ -5,7 +5,6 @@
   const status = form.querySelector('[data-contact-status]');
   const button = form.querySelector('button[type="submit"]');
   let widget;
-  let tokenCallback;
   let ready = false;
   let busy = false;
   let requestId = crypto.randomUUID();
@@ -27,35 +26,21 @@
     });
   }
 
-  function rejectToken(message) {
-    if (tokenCallback) tokenCallback.reject(new Error(message));
-    tokenCallback = undefined;
-  }
-
-  function verify() {
-    window.turnstile.reset(widget);
-    return new Promise((resolve, reject) => {
-      const timeout = setTimeout(() => rejectToken('The security check timed out. Please try again.'), 120000);
-      tokenCallback = {
-        resolve: token => { clearTimeout(timeout); resolve(token); },
-        reject: error => { clearTimeout(timeout); reject(error); },
-      };
-      window.turnstile.execute(widget);
-    });
-  }
-
   form.addEventListener('input', () => { if (!busy) requestId = crypto.randomUUID(); });
   form.addEventListener('submit', async event => {
     event.preventDefault();
     if (busy || !ready || !form.reportValidity()) return;
+    const token = window.turnstile.getResponse(widget);
+    if (!token || window.turnstile.isExpired(widget)) {
+      notify('Please complete the security check before sending.', true);
+      return;
+    }
     busy = true;
     button.disabled = true;
     button.textContent = 'Sending…';
     notify('Checking your request…');
     const values = new FormData(form);
     try {
-      const token = await verify();
-      tokenCallback = undefined;
       const response = await fetch(endpoint, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
@@ -91,12 +76,13 @@
       widget = window.turnstile.render(form.querySelector('[data-turnstile-container]'), {
         sitekey: config.siteKey,
         action: 'contact',
-        execution: 'execute',
+        execution: 'render',
         appearance: 'always',
         theme: 'auto',
-        callback: token => { if (tokenCallback) tokenCallback.resolve(token); },
-        'error-callback': () => { rejectToken('The security check failed. Please try again.'); },
-        'expired-callback': () => { rejectToken('The security check expired. Please try again.'); },
+        callback: () => {
+          if (status.textContent === 'Please complete the security check before sending.') notify('');
+        },
+        'error-callback': () => { notify('The security check failed. Please try again.', true); },
       });
       ready = true;
       button.disabled = false;
